@@ -16,12 +16,12 @@ const Faq = () => {
 
     
     
-    const options = [
-        {icon: faCreditCard, text:'Cartão de crédito'},
-        {icon: faWallet, text: 'Conta e abertura'},
-        {icon: faShieldAlt, text: 'Token digital'},
-        //{icon: FaUserTie, text: 'Produtos e serviços'}
-    ]
+    // const options = [
+    //     {icon: faCreditCard, text:'Cartão de crédito'},
+    //     {icon: faWallet, text: 'Conta e abertura'},
+    //     {icon: faShieldAlt, text: 'Token digital'},
+    //     {icon: faUserTie, text: 'Produtos e serviços'}
+    // ]
     return (
     <section className='faq text-light'>
     <Container className='faq py-5 '>
@@ -36,7 +36,7 @@ const Faq = () => {
                 </Row>
 
             </Col>
-            <Col className='d-none d-lg-block'>
+             <Col className='d-none d-lg-block'>
                 <IconText 
                 icon={faCreditCard} size={3} className='mb-3' textClassName= 'lead' color='#fff'>
                     Cartão de crédito e débito
@@ -51,7 +51,7 @@ const Faq = () => {
                     Produtos e serviços
                 </IconText>
             </Col>
-            <Col>
+                <Col>
                 <Accordion defaultActiveKey="0">
                     <Card >
                         <Card.Header>
@@ -61,7 +61,7 @@ const Faq = () => {
                         <Card.Body>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt arcu vel arcu fermentum, eget accumsan dolor dignissim. Nam eget quam semper, varius ligula sed, auctor augue. Maecenas et porta magna. Nulla mattis tortor vitae metus vestibulum scelerisque. Ut mollis a nisl vel suscipit. Curabitur scelerisque placerat ultrices. Proin purus ante, congue vel arcu ac, porta condimentum mauris. Maecenas massa orci, fringilla eget fermentum nec, dignissim nec diam.</Card.Body>
                         </Accordion.Collapse>
                     </Card>
-                    <Card >
+                    {/* <Card >
                         <Card.Header>
                         <Accordion.Toggle as={Button} variant='link'eventKey="1">Nulla porttitor eros ac ex tristique posuere </Accordion.Toggle>
                         </Card.Header>
@@ -84,12 +84,12 @@ const Faq = () => {
                         <Accordion.Collapse eventKey="3">
                         <Card.Body>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt arcu vel arcu fermentum, eget accumsan dolor dignissim. Nam eget quam semper, varius ligula sed, auctor augue. Maecenas et porta magna. Nulla mattis tortor vitae metus vestibulum scelerisque. Ut mollis a nisl vel suscipit. Curabitur scelerisque placerat ultrices. Proin purus ante, congue vel arcu ac, porta condimentum mauris. Maecenas massa orci, fringilla eget fermentum nec, dignissim nec diam.</Card.Body>
                         </Accordion.Collapse>
-                    </Card>
+                    </Card> */}
                 </Accordion>
-            </Col>
+            </Col>  
         </Row>
     </Container>
-    </section>
+    </section> 
     )
 };
 
