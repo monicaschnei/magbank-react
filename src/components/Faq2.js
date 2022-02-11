@@ -61,7 +61,7 @@ const Faq = () => {
                         <Card.Body>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt arcu vel arcu fermentum, eget accumsan dolor dignissim. Nam eget quam semper, varius ligula sed, auctor augue. Maecenas et porta magna. Nulla mattis tortor vitae metus vestibulum scelerisque. Ut mollis a nisl vel suscipit. Curabitur scelerisque placerat ultrices. Proin purus ante, congue vel arcu ac, porta condimentum mauris. Maecenas massa orci, fringilla eget fermentum nec, dignissim nec diam.</Card.Body>
                         </Accordion.Collapse>
                     </Card>
-                    {/* <Card >
+                        <Card >
                         <Card.Header>
                         <Accordion.Toggle as={Button} variant='link'eventKey="1">Nulla porttitor eros ac ex tristique posuere </Accordion.Toggle>
                         </Card.Header>
@@ -84,7 +84,7 @@ const Faq = () => {
                         <Accordion.Collapse eventKey="3">
                         <Card.Body>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt arcu vel arcu fermentum, eget accumsan dolor dignissim. Nam eget quam semper, varius ligula sed, auctor augue. Maecenas et porta magna. Nulla mattis tortor vitae metus vestibulum scelerisque. Ut mollis a nisl vel suscipit. Curabitur scelerisque placerat ultrices. Proin purus ante, congue vel arcu ac, porta condimentum mauris. Maecenas massa orci, fringilla eget fermentum nec, dignissim nec diam.</Card.Body>
                         </Accordion.Collapse>
-                    </Card> */}
+                    </Card> 
                 </Accordion>
             </Col>  
         </Row>
