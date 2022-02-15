@@ -5,7 +5,7 @@ import logoDesktop from "../Design/logo__magic-pay.png";
 import "./Hero.scss";
 
 
-const Hero = () => (
+const Hero = ({onClick}) => (
     
 <Card className="text-center py-md-5 py-5 text-light hero">
   <Row >
@@ -18,7 +18,7 @@ const Hero = () => (
         <p>
           Pague suas contas pelo nosso App
         </p>
-        <Button variant="outline" className="text-light">Abra sua conta</Button>
+        <Button variant="outline" className="text-light" onClick={onClick}>Abra sua conta</Button>
       </Card.Body>
     </Col>
   </Row>

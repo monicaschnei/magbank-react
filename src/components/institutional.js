@@ -13,7 +13,7 @@ import {
 
 
 
-const Institutional = () => (
+const Institutional = ({onClick}) => (
     <section className='Institutional text-light px-5'>
         <Container>
             <Row>
@@ -25,7 +25,7 @@ const Institutional = () => (
                     <IconText icon={faMobile} color='#fff' className='mb-2'>Simples e prático</IconText>
                     <IconText icon={faGlobe} color='#fff' className='mb-2'>Abertura de conta 100% online</IconText>
                     <IconText icon={faShieldAlt} color='#fff' className='mb-2'>Transações mais seguras</IconText>
-                    <Button variant='outline-light' className='mt-5 mb-5'>Abra sua conta</Button>
+                    <Button variant='outline-light' className='mt-5 mb-5' onClick={onClick}>Abra sua conta</Button>
                 </Col>
             </Row>
         </Container>
