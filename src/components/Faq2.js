@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Container, Row, Col, Accordion, section,icon, Card} from 'react-bootstrap'
+import {Container, Row, Col, Accordion, Card} from 'react-bootstrap'
 import IconText from './IconText';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import './Faq.scss';

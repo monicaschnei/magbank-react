@@ -5,7 +5,7 @@ import logo from "../Design/logo.svg"
 
 const Navigation = ({handleCreateAcc}) => (
     <Navbar variant="dark" expand="lg">
-  <Container>
+<Container>
     <Navbar.Brand href="#home">
       <img
         src={logo}
