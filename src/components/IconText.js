@@ -12,11 +12,11 @@ const IconText = ({
     onClick,
 
 }) => (
-    <Row className={'d-flex align-items-center ${className}'} onClick={onClick}>
+    <Row className={`d-flex align-items-center ${className}`} onClick={onClick}>
         <Col xs={size} className='d-flex justify-content-center'>
             <FontAwesomeIcon
             icon={icon}
-            size= {'${size}x'}
+            size= {`${size}x`}
             color={color}
            
             />

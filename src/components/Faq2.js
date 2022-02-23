@@ -78,7 +78,7 @@ const Faq = () => {
                  ))}
             </Col>
             <Col className="faq" >
-                 <Accordion  defaultActiveKey='0' activeKey={'${index}'} alwaysOpen>
+                 <Accordion  defaultActiveKey='0' activeKey={`${index}`} alwaysOpen>
                     <Accordion.Item as={Card.Header} className="faq_item" eventKey="0">
                         <Accordion.Header>Lorem ipsum dolor sit amet</Accordion.Header>
                         <Accordion.Body>
