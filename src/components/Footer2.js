@@ -10,8 +10,7 @@ import './Footer.scss';
 import {
     
     faMobileAlt,
-    faMobile,
-    faGlobe,
+   
    
 } from '@fortawesome/free-solid-svg-icons';
 

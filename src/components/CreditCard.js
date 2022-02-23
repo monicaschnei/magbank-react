@@ -20,9 +20,9 @@ const CreditCard = () => (
                 </Row>
                 <Row>
                     <Col xs={12} lg={6} className='mb-4'>
-                        <iconText icon={faCreditCard} size={2} color='#f05656' textClassName='h5 text-muted'>
+                        <FontAwesomeIcon icon={faCreditCard} size={2} color='#f05656' textClassName='h5 text-muted'>
                             Crédito Pessoal
-                        </iconText>
+                        </FontAwesomeIcon>
                     </Col>
                     <Col xs={12} lg={6} className='mb-4'>
                         <Row>

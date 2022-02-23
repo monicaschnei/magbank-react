@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Container, Row, Col, Accordion, section,icon, Card} from 'react-bootstrap'
+import {Container, Row, Col, Accordion, Card} from 'react-bootstrap'
 import IconText from './IconText';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import './Faq.scss';
@@ -78,7 +78,7 @@ const Faq = () => {
                  ))}
             </Col>
             <Col className="faq" >
-                 <Accordion  defaultActiveKey='0' activeKey={'${index}'} alwaysOpen>
+                 <Accordion  defaultActiveKey='0' activeKey={`${index}`} alwaysOpen>
                     <Accordion.Item as={Card.Header} className="faq_item" eventKey="0">
                         <Accordion.Header>Lorem ipsum dolor sit amet</Accordion.Header>
                         <Accordion.Body>
