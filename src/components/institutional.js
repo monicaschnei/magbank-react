@@ -31,4 +31,5 @@ const Institutional = ({onClick}) => (
             </Row>
         </Container>
     </section>
-
+);
+export default Institutional;

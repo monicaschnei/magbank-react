@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import {Container, Row, Button} from 'react-bootstrap';
-=======
 import {Container, Row, Button,Col} from 'react-bootstrap';
->>>>>>> 07113cdc84dbf677d8b6b0bbbc3fee37631cfd92
 
 const CenteredButton = ({children, onClick}) =>(
     <Container>
