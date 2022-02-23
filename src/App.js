@@ -18,9 +18,7 @@ const App = () => {
       <Home/>
       <AccountModal/>
       <Footer/>
-    </>
-  );
-};
-
+</>
+  )}
 export default App;
 
