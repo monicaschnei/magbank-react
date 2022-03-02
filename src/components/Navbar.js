@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import {Navbar, Nav, Container, Button, ButtonGroup, NavDropdown} from "react-bootstrap";
 import './Navbar.scss';
 import logo from "../Design/logo.svg" 
@@ -23,7 +24,7 @@ const Navigation = ({handleCreateAcc}) => (
       <ButtonGroup aria-label="Basic example">
         <Button variant="outline-light">
             <NavDropdown title="Acessar minha conta" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Pessoa física</NavDropdown.Item>
+                <Link to="/login"><NavDropdown.Item href="#action/3.1">Pessoa física</NavDropdown.Item></Link>
                 <NavDropdown.Item href="#action/3.2">Pessoa jurídica</NavDropdown.Item>
             </NavDropdown>
         </Button>

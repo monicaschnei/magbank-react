@@ -1,4 +1,5 @@
 import React from  'react';
+import { Routes, Route, Link} from "react-router-dom";
 import {Container, Row, Col, Button} from  'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCircle,faUser} from '@fortawesome/free-solid-svg-icons';
@@ -7,14 +8,14 @@ import './Dashboard.scss';
 
 const Dashboard = () => {
     const data = {
-        lastestBalance:[
+        latestBalance:[
         {date:'22/07', description:'SAQUE 24H 012345', value: '300,00'},
         {date:'21/07', description:'SUPERMERCADO 02323626', value: '275,00'},
         {date:'20/07', description:'NETFLIX 235236', value: '30,00'},
         {date:'15/07', description:'FARMÁCIA 12125', value: '350,00'},
     ],
 
-    futureBalance: [
+        futureBalance: [
         {date:'22/07', description:'SAQUE 24H 012345', value: '300,00'},
         {date:'21/07', description:'SUPERMERCADO 02323626', value: '275,00'},
         {date:'20/07', description:'NETFLIX 235236', value: '30,00'},
@@ -37,11 +38,23 @@ const Dashboard = () => {
                         <p className='text-muted'>ag: 1234 c/c: 4321-5</p>
                     </Col>
                 </Row>
-                <Button className='dashboard__button dashboard__button--active text-left d-block' variant='link' size='lg' block>Minha Conta</Button>
-                <Button className='dashboard__button text-left d-block' variant='link' size='lg' block>Pagamento</Button>
-                <Button className='dashboard__button text-left d-block' variant='link' size='lg' block>Extrato</Button>
+                <Link to='/dashboard'>
+                    <Button className='dashboard__button dashboard__button--active text-left d-block' variant='link' size='lg' block>Minha Conta</Button>
+                </Link>
+                <Link to='/dashboard/payments'>
+                    <Button className='dashboard__button text-left d-block' variant='link' size='lg' block>Pagamento</Button>
+                </Link>
+                <Link to='/dashboard/history'>
+                    <Button className='dashboard__button text-left d-block' variant='link' size='lg' block>Extrato</Button>
+                </Link>
+               
             </Col>
-            <AccountBalance  data={data}/>
+            <Routes>
+                <Route path="/dashboard/*"  element={<AccountBalance  data={data}/>} />
+                <Route path="/dashboard/payments" element={<Dashboard/>}/> 
+                <Route path="/dashboard/history"/>
+            </Routes>
+            
         </Row>
         
     </Container>
