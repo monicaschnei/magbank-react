@@ -1,8 +1,9 @@
 import React from 'react';
-import {Button, Col, Tabs, Tab, Table} from 'react-bootstrap'
+import {Button, Col, Tabs, Tab, Table} from 'react-bootstrap';
 
 const AccountBalance = ({data}) => {
-    const {latestBalance, futureBalance} = data;
+    const {futureBalance} = data;
+    const {latestBalance} = data;
     return(
     <>
     <Col xs={12} lg={3} md={4} className='mt-lg-5 pt-lg-4'>
@@ -15,8 +16,8 @@ const AccountBalance = ({data}) => {
                 <p className='mb-0'>Limite disponível</p>
                 <p className='mb-4'>R$ 5.000,00</p>
                 <Button variant='secondary'>Ver extrato</Button>
-            </Col>
-            {/* <Col xs={12} lg={5} className='mt-lg-5 pt-lg-5'>
+    </Col>
+            <Col xs={12} lg={5} className='mt-lg-5 pt-lg-5'>
                 <Tabs className=' mt-5 pt-lg-5 ' defaultActiveKey='latest' >
                     <Tab eventKey='latest' title='Últimos Lançamentos'>
                         <Table  striped bordeless>
@@ -35,7 +36,6 @@ const AccountBalance = ({data}) => {
                                      <td>{value}</td>
                                     </tr>
                                 ))}
-                               
                             </tbody>
                         </Table>
                     </Tab>
@@ -61,7 +61,7 @@ const AccountBalance = ({data}) => {
                         </Table>
                     </Tab>
                 </Tabs>
-            </Col> */}
+            </Col>
     </>
      );
 };
