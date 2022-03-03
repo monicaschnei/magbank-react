@@ -1,12 +1,22 @@
-import React from  'react';
-import { Routes, Route, Link} from "react-router-dom";
+import React, {useState} from  'react';
+import { Routes, Route, Link, Outlet} from "react-router-dom";
 import {Container, Row, Col, Button} from  'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCircle,faUser} from '@fortawesome/free-solid-svg-icons';
 import AccountBalance from '../components/AccountBalance';
+import Login from '../components/institutional';
 import './Dashboard.scss';
+import Institutional from '../components/institutional';
 
 const Dashboard = () => {
+    
+    const [activeLink, setActiveLink] = useState(0);
+
+    const links = [
+        {text:'Minha conta', path:'/dashboard', exact:true},
+        {text:'Pagamentos', path: '/dashboard/payments'},
+        {text:'Extrato', path:'/dashboard/history'},
+    ];
     const data = {
         latestBalance:[
         {date:'22/07', description:'SAQUE 24H 012345', value: '300,00'},
@@ -38,22 +48,33 @@ const Dashboard = () => {
                         <p className='text-muted'>ag: 1234 c/c: 4321-5</p>
                     </Col>
                 </Row>
-                <Link to='/dashboard'>
-                    <Button className='dashboard__button dashboard__button--active text-left d-block' variant='link' size='lg' block>Minha Conta</Button>
-                </Link>
-                <Link to='/dashboard/payments'>
-                    <Button className='dashboard__button text-left d-block' variant='link' size='lg' block>Pagamento</Button>
-                </Link>
-                <Link to='/dashboard/history'>
-                    <Button className='dashboard__button text-left d-block' variant='link' size='lg' block>Extrato</Button>
-                </Link>
+                {links.map(({text, path}, key) => (
+                    <Link className='dashboard__link d-block' to={path} key={key}>
+                        <Button 
+                        className={`dashboard__button text-left' ${key === activeLink ? 'dashboard__button--active' : ''}`} 
+                        variant='link' 
+                        size='lg' 
+                        block
+                        onClick = {() => setActiveLink(key)}
+                        >
+                            {text}
+                        </Button>
+                    </Link>
+                ) )}
+              
                
             </Col>
-            <Routes>
-                <Route path="/dashboard/*"  element={<AccountBalance  data={data}/>} />
-                <Route path="/dashboard/payments" element={<Dashboard/>}/> 
-                <Route path="/dashboard/history"/>
+            <Col xs={12} lg={8}>
+            <Routes >
+            <Route path='/'>
+
+                <Route index element={<AccountBalance  data={data}/>}/> 
+                <Route path="payments" element={<Institutional/>}/> 
+                <Route path="history"/> 
+            </Route>
             </Routes>
+            
+            </Col>
             
         </Row>
         
