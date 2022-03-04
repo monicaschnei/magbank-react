@@ -1,5 +1,5 @@
 import React, {useState} from  'react';
-import { Routes, Route, Link, Outlet} from "react-router-dom";
+import { Routes, Route, Link} from "react-router-dom";
 import {Container, Row, Col, Button} from  'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCircle,faUser} from '@fortawesome/free-solid-svg-icons';
@@ -49,7 +49,7 @@ const Dashboard = () => {
                     </Col>
                 </Row>
                 {links.map(({text, path}, key) => (
-                    <Link className='dashboard__link d-block' to={path} key={key}>
+                    <Link className='dashboard__link d-block' to='/dashboard' key={key}>
                         <Button 
                         className={`dashboard__button text-left' ${key === activeLink ? 'dashboard__button--active' : ''}`} 
                         variant='link' 
@@ -61,17 +61,13 @@ const Dashboard = () => {
                         </Button>
                     </Link>
                 ) )}
-              
-               
-            </Col>
-            <Col> <AccountPayments/>            </Col>
-            <Routes >
-            <Route path='/'>
+               </Col>
 
-                <Route index element={<AccountBalance  data={data}/>}/> 
-                <Route path="payments" element={<AccountPayments/>}/> 
+            <Routes >
+                <Route path='/'element={<AccountBalance data={data}/>}/>
+                <Route path="payments" element={<Dashboard/>}/> 
                 <Route path="history"/> 
-            </Route>
+            
             </Routes>
             
             
