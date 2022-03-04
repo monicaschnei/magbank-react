@@ -20,15 +20,28 @@
     &__button{
         color: $color-primary;
         text-decoration: none;
+        margin-bottom: 0.5rem;
         
         &:hover
         &--active{
             color: #fff;
-            background-color: $color-primary;
+            background-color: $color-muted;
             text-decoration: none;
         }
    
     }
+
+    .dashboard__button--active{
+        color: #fff;
+        background-color: $color-primary;
+        text-decoration: none;
+    }
+    .dashboard__button:hover{
+        color: #fff;
+        background-color: $color-muted;
+        text-decoration: none;
+    }
+
     .nav-link{
         color: $color-primary;
         
