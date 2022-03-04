@@ -4,7 +4,7 @@ import {Container, Row, Col, Button} from  'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCircle,faUser} from '@fortawesome/free-solid-svg-icons';
 import AccountBalance from '../components/AccountBalance';
-import Login from '../components/institutional';
+import AccountPayments from '../components/AccountPayments'
 import './Dashboard.scss';
 import Institutional from '../components/institutional';
 
@@ -64,17 +64,17 @@ const Dashboard = () => {
               
                
             </Col>
-            <Col xs={12} lg={8}>
+            <Col> <AccountPayments/>            </Col>
             <Routes >
             <Route path='/'>
 
                 <Route index element={<AccountBalance  data={data}/>}/> 
-                <Route path="payments" element={<Institutional/>}/> 
+                <Route path="payments" element={<AccountPayments/>}/> 
                 <Route path="history"/> 
             </Route>
             </Routes>
             
-            </Col>
+            
             
         </Row>
         
