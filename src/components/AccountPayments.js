@@ -34,7 +34,8 @@ const AccountPayments = () => (
                         </Form.Group>
                         <Button variant='success'>Continuar</Button>
                     </Tab>
-                    <Tab eventKey='transfer' title='Transferência'>    
+                    <Tab eventKey='transfer' title='Transferência'>  
+                      
                     </Tab>
                 </Tabs>
             </Col>
