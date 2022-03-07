@@ -7,23 +7,26 @@ import './Login.scss';
 const Login = ({auth}) => {
     const [name, setName] = useState ();
     const [account, setAccount] = useState();
-    const History = useLocation ();
+    const history = useLocation ();
+
     const handleSubmit = () => {
-        auth.login(name, account, History.push("/dashboard"))
-    }
-    return
-    (
+       auth.login(name, account, history.push("/dashboard*"));
+       console.log ("submit");
+    };
+   return(
+    <>
     <section className='login'>
         <div className='login__container'>
             <Row>
                 <Col className='text-center text-light'>
                 <Image src={logo} className='mb-5'/>
                     <Form>
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Group className="mb-3" controlId="formBasicName">
                             <Form.Label className='lead'><strong>Nome e Sobrenome</strong></Form.Label>
-                            <Form.Control type="text" value={name} onChange={(e) => setName (e.currentTarget.valueAsNumber)} />
+                            <Form.Control type="text" value={name} onChange={(e) => setName (e.currentTarget.value)} />
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+
+                        <Form.Group className="mb-3" controlId="formBasicAccount">
                             <Form.Label className='lead'><strong>Número da conta</strong></Form.Label>
                             <Form.Control type="number" value={account} onChange={(e) => setAccount(e.currentTarget.value)}/>
                         
@@ -43,7 +46,7 @@ const Login = ({auth}) => {
             </Row>
         </div>
     </section>
-
-);
+</>
+   )
 }
 export default Login;
