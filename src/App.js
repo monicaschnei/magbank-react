@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route, Redirect} from "react-router-dom";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer2';
 import AccountModal from './components/AccountModal';
@@ -8,22 +8,13 @@ import './App.scss';
 import Home from './components/Home';
 import Login from './views/Login';
 import Dashboard from './views/Dashboard';
-
-// const PrivateRoute = ({children, logged, ...rest}) => {
-//   <Route
-//     {...rest}
-//     render={() =>
-//       logged ? (
-//         children
-//       ) : (
-//         <Redirect
-//           to='/login'         
-         
-//         />
-//       )
-//   }
-//   />
-// }
+ const PrivateRoute = ({children, logged, ...rest}) => {
+   <Route
+    {...rest}
+   render={() =>
+    (logged ? children : <Redirect to='/login' />)}
+/>
+ };
 
 const App = () => {
   const [showModal, setShowModal] = useState (false);
@@ -31,17 +22,17 @@ const App = () => {
   const [account, setAccount] = useState ();
   const isLogged = name && account;
 
-  const fakeAuth = {
+const fakeAuth = {
     login (name, account, cb) {
-      setName (name);
-      setAccount (account);
-      setTimeout (cb, 100);
-    },
-    logout (cb) {
-      setName();
-      setAccount ();
-      setTimeout (cb, 100);
-    },
+    setName (name);
+    setAccount (account);
+    setTimeout (cb, 100);
+   },
+   logout (cb) {
+    setName();
+    setAccount ();
+    setTimeout (cb, 100);
+   },
   };
 
   return (
