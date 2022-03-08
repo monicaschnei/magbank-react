@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useLocation} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import {Row, Col, Form, Image, Button} from 'react-bootstrap';
 import logo from '../Design/logo.svg';
 import './Login.scss';
@@ -7,10 +7,10 @@ import './Login.scss';
 const Login = ({auth}) => {
     const [name, setName] = useState ();
     const [account, setAccount] = useState();
-    const history = useLocation ();
+    const navigate = useNavigate();
 
     const handleSubmit = () => {
-       auth.login(name, account, history.push("/dashboard*"));
+       auth.login(name, account, navigate("/dashboard/*"));
        console.log ("submit");
     };
    return(
@@ -38,7 +38,7 @@ const Login = ({auth}) => {
                         </Form.Group>
                       
                             <Button className='mt-3' variant="success" type="submit" onClick={handleSubmit}>
-                                Criar Conta
+                                Entrar
                             </Button>
                      
                     </Form>
