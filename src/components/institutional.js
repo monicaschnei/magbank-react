@@ -15,7 +15,7 @@ const Institutional = ({ onClick }) => (
       <Row>
         <Col xs={12} lg={5}></Col>
         <Col xs={12} lg={7}>
-          <h2 className="Institutional-title my-5">Já nascemos digita</h2>
+          <h2 className="Institutional-title my-5">Já nascemos digital</h2>
           <p className="mb-5">
             {" "}
             is simply dummy text of the printing and typesetting industry. Lorem
